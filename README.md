@@ -1,2 +1,7 @@
 # Clients
-Clients is a menu in python, manage clients
+Clients: 
+Menu with options that calls the functions to perform the action
+Create
+Read
+Update
+Delete
