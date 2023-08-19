@@ -1,4 +1,4 @@
-## Fichero principal del gestor ##
+## Manager main file ##
 import menu
 
 def main():

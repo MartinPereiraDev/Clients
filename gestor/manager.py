@@ -1,11 +1,11 @@
- ### Administrador de clientes ####
+ ### customer manager ####
 import re
 import helpers
 
 clients = []
 
 
-"""añadiendo mock data """
+""" mock data """
 marta ={'nombre': 'Marta', 'apellido':'Perez', 'dni':'15J'}
 clients.append(marta)
 
@@ -15,15 +15,15 @@ clients.append({'nombre': 'Manolo', 'apellido':'Lopez', 'dni':'48H'})
 clients.append({'nombre': 'Ana', 'apellido':'Garcia', 'dni':'28Z'})
 
 def show(client):
-    """ Funcion que muestra un cliente
-       Args:
-        print con formato que muestra los clientes 
+    """ Function displayed by a client
+    Arg:
+    client    
      """
     print(f"{client['dni']}:{client['nombre']} {client['apellido']}")
 
 def show_all():
-    """ Funcion que muestra a todos los clientes
-        Llama a la funcion show() y devuelve todos los clientes 
+    """ Function that shows all customers
+         Call the show() function
     """
     for client in clients:
         show(client)
@@ -31,8 +31,7 @@ def show_all():
 
 def find():
 
-    #test
-
+    #test in dni 
     """
     >>> is_valid ('48H') # no valido 
     False
@@ -53,31 +52,25 @@ def find():
     print("No se ha encontrado el cliente con ese DNI")
 
 def is_valid(dni):
-    """ Funcion que comprueba que el DNI sea valido
+    """ Function that checks that the DNI is valid
         Args
-            dni : dni ingresado por persona
+            dni : input
+        prefex check dni
     """
 
-    """prefijo que comprueba que el  DNI sea correcto"""
     if not re.match('[0-9]{2}[A-Z]',dni):
         return False
     
-    """ for para comprobar que no se repita el DNI"""
+    """ for to check that the DNI is not repeated"""
     for client in clients:
         if client['dni'] == dni:
             return False
     return True
 
 
-
-
 def add():
 
-    """  Funcion que agrega cliente
-    
-    Comprueba que Dni no se repita antes de agregarlo 
-
-    """ 
+    """  Function that adds client Check that Dni is not repeated before adding it """ 
     client = dict()
 
     print("Introduce nombre (de 2 a 30 caracteres)")
@@ -99,8 +92,8 @@ def add():
 
 def edit():
 
-    """ Funcion que edita un cliente
-    Se comprueba que el dni exista para cambiar datos del cliente
+    """ Function edited by a client
+     It is verified that the ID exists to change customer data
     """
 
     dni = input("Introduce el DNI del cliente\n")
@@ -120,12 +113,11 @@ def edit():
 
 def delete():
 
-    """ Funcion que borra un cliente
+    """ Function that delete a client
     Arg: 
         dni (str)
-    Se busca por dni al cliente
-    Return True : si se borra
-           False : si no se borro 
+           Return True : deleted customer
+           False : customer not deleted
     """
 
     dni = input("Introduce el DNI del cliente\n>")

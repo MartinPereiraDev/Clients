@@ -2,12 +2,11 @@ import helpers
 import manager
 
 def loop():
-    """ Funcion que genera loop para el menu
-    Args:
-        opcion (int) : numero de opcion del menu
-    Returns:
-        Segun  opcion retorna  funcion listada
-        loop rompe con break en opcion 6  
+    """ Function that generates menu loop
+    
+    return:
+        According to option returns function
+         loop breaks with option 6 
     """
     while True:
 

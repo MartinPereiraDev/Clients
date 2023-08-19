@@ -1,18 +1,13 @@
-## Funciones de ayuda ##
+## Functions ##
 
 import os
 import platform
 
 
 def clear():
-       """ Limpia la Pantalla
-
-    Args:
-        os.system = verifica sistema operativo 
-        
-    
+       """ Clean the screen     
     Returns:
-            cls o clear dependiendo del sistema operativo
+            cls or clear depending on the operating system
 
        """
 if platform.system() == "Windows":
@@ -21,14 +16,14 @@ else:
           os.system('clear')
 
 def text_input (min_length, max_length):
-    """ Permite controlar el tamaño del texto a ingresar 
+    """ function control the size of the text to be entered
 
     Args:
-        min_length  (int) : minimo de texto a ingresar
-        max_length (int) : maximo de texto a ingresar
+        min_length (int) : minimun
+        max_length (int) : maximum
     
-    Returns:
-            text (str) :  minimo y maximo de longitud establecida
+    Return:
+            text (str) 
 
     """
     while  True:
